@@ -1,4 +1,4 @@
-## Exercise: Level 1
+### Exercise 1 ###
 
 ### Levels: 1 + 2 ###
 
