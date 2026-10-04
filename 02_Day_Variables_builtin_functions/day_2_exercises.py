@@ -33,7 +33,7 @@ print("Length of First Name != Length of Last Name ->", len(firstname) != len(la
 print("\n\nMathematical Calculations")
 print("-------------------------")
 num_one, num_two = 5, 4
-print("num_one = ", num_one, "\nnum_two", num_two)
+print("num_one =", num_one, "\nnum_two", num_two)
 
 variable_total = num_one+num_two
 variable_diff = num_one-num_two
@@ -43,8 +43,8 @@ variable_remainder = num_two%num_one
 variable_exp = num_one**num_two
 variable_floor_division = num_one//num_two
 
-print("\nTotal = ", variable_total, "\nDifference = ", variable_diff, "\nProduct = ", variable_product, "\nDivision = ", variable_division,
-      "\nRemainder = ", variable_remainder, "\nExponent = ", variable_exp, "\nFloor Division = ", variable_floor_division)
+print("\nTotal =", variable_total, "\nDifference =", variable_diff, "\nProduct =", variable_product, "\nDivision =", variable_division,
+      "\nRemainder =", variable_remainder, "\nExponent =", variable_exp, "\nFloor Division =", variable_floor_division)
 
 import numpy as np
 
