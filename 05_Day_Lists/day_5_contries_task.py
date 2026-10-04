@@ -226,5 +226,4 @@ else:
 
 
 countries3 = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
-
 china, russia, usa, *scandic = countries3

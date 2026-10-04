@@ -8,11 +8,12 @@ fruits = []
 fruits = ['banana', 'apple', 'pineapple', 'mango', 'grape', 'lime', 'cherry']
 print("Fruits =", fruits)
 print('Length of fruits list =', len(fruits))
-
 print("First fruit:", fruits[0], "\nMiddle fruit:", fruits[int(len(fruits)/2)], "\nLast fruit:", fruits[-1])
+
 
 mixed_data_types = ['Samindi Mendis', 29, 164, 'Unmarried', 'address line 1, address line 2']
 print(); print(mixed_data_types)
+
 
 it_comp = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
 
@@ -70,6 +71,8 @@ if len(it_comp_1)%2 != 0:
     #del it_comp_1
     #print("Destroy all IT Companies: ", it_comp_1)
 
+
+
 front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 back_end = ['Node','Express', 'MongoDB']
 
@@ -87,6 +90,8 @@ full_stack.insert(redux_idx + 2, 'SQL')
 print("After inserting Python and SQL after Redux:", *full_stack)
 
 
+
+
 print("\n\nLevel 2\n-------")
 
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
@@ -102,7 +107,3 @@ print("Ages list:", ages)
 
 print("Average age:", int(sum(ages)/len(ages)))
 print(f'Range of ages: {min(ages)} - {max(ages)}')
-
-
-
-
