@@ -27,6 +27,8 @@ print("\nFirst Name type ->", type(firstname), "\nAge type ->", type(age2), "\nI
 print("\nLength of first name =", len(first_name))
 
 print("Length of First Name:Length of Last Name ->", len(firstname), ":", len(lastname))
+print("Length of First Name == Length of Last Name ->", len(firstname) == len(lastname))
+print("Length of First Name != Length of Last Name ->", len(firstname) != len(lastname))
 
 print("\n\nMathematical Calculations")
 print("-------------------------")
