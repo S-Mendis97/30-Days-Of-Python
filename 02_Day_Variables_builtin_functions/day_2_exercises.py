@@ -60,7 +60,7 @@ print("\n\nUser's Circle\n------------")
 user_radius = int(input("Radius of circle in m = "))
 user_area_of_circle = np.pi * (user_radius**2)
 
-print("User's Radius = ", user_radius, "\nArea of User's Circle = ", user_area_of_circle)
+print("User's Radius =", user_radius, "\nArea of User's Circle =", user_area_of_circle)
 
 
 print("\n\nUser Data\n---------")
