@@ -33,7 +33,6 @@ print("['Asabeneh', 'Python', 'Finland'] -> ", type(['Asabeneh', 'Python', 'Finl
 print("My Name, Samindi -> ", type("Samindi"))
 print("Family Name, Mendis ->", type("Mendis"))
 print("Country, Sri Lanka -> ", type("Sri Lanka"), "\n")
-#print("")
 
 
 print("\n\n### Level 3 ###\n")
@@ -46,4 +45,4 @@ x2 = 10; y2 = 8
 print("(x1,y1) = ", (x1,y1))
 print("(x2,y2) = ", (x2,y2))
 
-print("\nEuclidean Distance = (x2-x1)^2 + (y2-y1)^2 = ", (x2-x1)**2 + (y2-y1)**2, "")
+print("\nEuclidean Distance = (x2-x1)^2 + (y2-y1)^2 =", (x2-x1)**2 + (y2-y1)**2, "")

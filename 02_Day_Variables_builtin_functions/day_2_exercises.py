@@ -62,6 +62,7 @@ user_area_of_circle = np.pi * (user_radius**2)
 
 print("User's Radius = ", user_radius, "\nArea of User's Circle = ", user_area_of_circle)
 
+
 print("\n\nUser Data\n---------")
 
 user_first_name = input("First Name: ")
