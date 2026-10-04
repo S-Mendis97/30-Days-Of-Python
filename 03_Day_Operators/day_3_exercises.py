@@ -62,7 +62,7 @@ euclid_dist = (y2 - y1)**2 + (x2 - x1)**2
 
 print("(x1,y1) =", (x1,y1), "\n(x2,y2) =", (x2,y2))
 print("\nSlope = ", slope)
-print("Euclidean Distance = ", euclid_dist)
+print("Euclidean Distance =", euclid_dist)
 
 
 
