@@ -73,7 +73,7 @@ spring = 'March', 'April', 'May'
 summer = 'June', 'July', 'August'
 autumn = 'September', 'October', 'November'
 
-user_month = input("Enter month: ").capitalize()
+user_month = input("\n\nEnter month: ").capitalize()
 
 if user_month in spring:
     print("It's spring season! Look at the birds and the bees!")
