@@ -72,10 +72,12 @@ age_set = set(age)
 print(f"Convert the list ages ({age}) to a set -> {age_set}")
 
 sentence = 'I am a teacher and I love to inspire and teach people'
+
+'''
 split_sentence = sentence.split()
 
 print("\nSentence:", sentence, "\nSplit sentence:", split_sentence)
-'''
+
 unique_words = []
 
 for word in split_sentence:
@@ -85,6 +87,8 @@ for word in split_sentence:
 print("\nUnique words:", unique_words, "\nNumber of unique words:", len(unique_words))
 
 '''
+
+print("\nSentence:", sentence, "\nSplit sentence:", split_sentence)
 
 unique_words2 = []
 
