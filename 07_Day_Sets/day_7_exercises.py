@@ -88,7 +88,7 @@ print("\nUnique words:", unique_words, "\nNumber of unique words:", len(unique_w
 
 '''
 
-print("\nSentence:", sentence, "\nSplit sentence:", split_sentence)
+print("\nSentence:", sentence, "\nSplit sentence:", sentence.split())
 
 unique_words2 = []
 
