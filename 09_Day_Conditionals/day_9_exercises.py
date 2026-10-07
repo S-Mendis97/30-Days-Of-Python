@@ -114,6 +114,7 @@ person = {
     }
 }
 
+
 # 1. Check if skills exists and print the middle skill
 if 'skills' in person:
     middle_index = len(person['skills']) // 2
