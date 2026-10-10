@@ -2,7 +2,7 @@ print("\n### Exercise 10 ###")
 print("------------------")
 
 print("Level 1\n-------")
-'''
+
 def add_two_numbers(num1, num2):
     num_sum = num1 + num2
     return num_sum
@@ -184,7 +184,6 @@ def sum_of_even(num):
     return total
 
 print(sum_of_even(10))
-'''
 
 
 
