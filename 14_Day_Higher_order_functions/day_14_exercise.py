@@ -201,4 +201,3 @@ most_pplt_countr = sorted(ctr_data, key = lambda item: item["population"], rever
 print("\n10 most populated countries:")
 for country in most_pplt_countr[:10]:
     print(f"{country["name"]}: {country["population"]}")
-
