@@ -84,10 +84,121 @@ print("\n11.", sentence)
 
 
 
+import sys
+from pathlib import Path
+
+project_folder = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_folder))
+
+from data.countries import countries as countries_list
+
+def categorize_countries(pattern):
+    return list(filter(lambda country: pattern.lower() in country.lower(), countries_list))
+
+print("\n12. Countries with:\nland in it:", ", ".join(categorize_countries('land')))
+print("\nia in it:", ", ".join(categorize_countries('ia')))
+print("\nisland in it:", ", ".join(categorize_countries('island')))
+print("\nstan in it:", ", ".join(categorize_countries('stan')))
+
+
+
+def countries_by_starting_letter(countries):
+    starting_letters = {}
+
+    for country in countries:
+        first_letter = country[0].upper()
+
+        if first_letter in starting_letters:
+            starting_letters[first_letter] += 1
+        else:
+            starting_letters[first_letter] = 1
+
+    return starting_letters
+
+countr_start_letter = countries_by_starting_letter(countries_list)
+
+print("\n13. Countries by starting letter:" )
+for letter in countr_start_letter:
+    print(letter, ":", countr_start_letter[letter])
+
+
+
+from data.countries_data import countries_data 
+
+def get_first_ten_countries(countr_data):
+    return [country["name"] for country in countr_data[:10]] 
+
+print("\n14. Get first 10 countries:", ", ".join(get_first_ten_countries(countries_data)))
+
+
+
+def get_last_ten_countries(countr_data):
+    return [country["name"] for country in countr_data[-10:]] 
+
+print("\n15. Get last 10 countries:", ", ".join(get_last_ten_countries(countries_data)))
+
+
+
 
 
 
 print("\n\nLevel 3\n-------")
 
+from data.countries_data import countries_data as ctr_data
 
-print()
+sorted_name = sorted(ctr_data, key = lambda item: item["name"])
+
+print("Countries data list sorted by name:")
+for country in sorted_name:
+    print(country["name"], end=", ")
+
+
+
+sorted_capital = sorted(filter(lambda country: country["capital"] != "", ctr_data), key=lambda country: country["capital"])
+
+print("\n\nCountries data list sorted by capital:")
+for country in sorted_capital:
+    print(f"{country["capital"]} in {country["name"]}", end="\n")
+
+
+
+sorted_population = sorted(ctr_data, key = lambda item: item["population"])
+
+print("\nCountries data list sorted by population:")
+for country in sorted_population:
+    print(f"{country["population"]} in {country["name"]}", end="\n")
+
+
+
+language_count = {}
+
+for country in ctr_data:
+    for language in country["languages"]:
+        if language in language_count:
+            language_count[language] += 1
+        else:
+            language_count[language] = 1
+
+
+sorted_languages = sorted(
+    language_count.items(),
+    key=lambda item: item[1],
+    reverse=True
+)
+
+
+top_10_languages = sorted_languages[:10]
+
+print("\n10 most spoken languages by location:")
+
+for language, count in top_10_languages:
+    print(language, "-", count)
+
+
+
+most_pplt_countr = sorted(ctr_data, key = lambda item: item["population"], reverse=True)
+
+print("\n10 most populated countries:")
+for country in most_pplt_countr[:10]:
+    print(f"{country["name"]}: {country["population"]}")
+
