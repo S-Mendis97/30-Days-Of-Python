@@ -441,6 +441,7 @@ The **__init__**.py exposes specified resources from its modules to be imported 
 
 🌕 You are always progressing and you are a head of 20 steps to your way to greatness. Now do some exercises for your brain and muscles.
 
+
 ## Exercises: Day 20
 
 1. Read this url and find the 10 most frequent words. romeo_and_juliet = 'http://www.gutenberg.org/files/1112/1112.txt'
