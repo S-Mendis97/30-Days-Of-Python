@@ -149,6 +149,7 @@ f.close()
 
 After we open a file, we should close it. There is a high tendency of forgetting to close them. There is a new way of opening files using _with_ - closes the files by itself. Let us rewrite the the previous example with the _with_ method:
 
+
 ```py
 with open('./files/reading_file_example.txt') as f:
     lines = f.read().splitlines()
