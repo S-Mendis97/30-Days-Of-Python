@@ -100,7 +100,6 @@ class PersonAccount:
 
     def total_income(self):
         total = 0
-
         for income in self.incomes:
             total += income[0]
 
@@ -108,7 +107,6 @@ class PersonAccount:
 
     def total_expense(self):
         total = 0
-
         for expense in self.expenses:
             total += expense[0]
 
@@ -118,23 +116,17 @@ class PersonAccount:
         return self.total_income() - self.total_expense()
 
     def account_info(self):
-        return (
-            f"Name: {self.firstname} {self.lastname}\n"
-            f"Total income: {self.total_income()}\n"
-            f"Total expense: {self.total_expense()}\n"
-            f"Account balance: {self.account_balance()}"
-        )
-        
+        return(f'Name: {self.firstname} {self.lastname}\n'
+               f'Total income:\t {self.total_income()}\n'
+               f'Total expenses:\t {self.total_expense()}\n'
+               f'Account balance: {self.account_balance()}')
 
-account = PersonAccount("Sami", "Mendis")
 
-account.add_income(2500, "Salary")
-account.add_income(300, "Freelance work")
+account = PersonAccount('Samindi', 'Mendis')
+account.add_income(3500, 'Salary')
+account.add_income(1500, 'Freelance Work')
 
-account.add_expense(800, "Rent")
-account.add_expense(200, "Groceries")
+account.add_expense(650, 'Rent')
+account.add_expense(200, 'Groceries')
 
 print(account.account_info())
-
-#print(account.incomes)
-#print(account.expenses)
