@@ -97,6 +97,7 @@ For reference check the [beautifulsoup documentation](https://www.crummy.com/sof
 
 🌕 You are so special, you are progressing everyday. You are left with only eight days to your way to greatness. Now do some exercises for your brain and muscles.
 
+
 ## 💻 Exercises: Day 22
 
 1. Scrape the following website and store the data as json file(url = 'http://www.bu.edu/president/boston-university-facts-stats/').
