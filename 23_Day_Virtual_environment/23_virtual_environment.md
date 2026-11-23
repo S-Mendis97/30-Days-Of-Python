@@ -105,6 +105,7 @@ When you finish you should dactivate active project using _deactivate_.
 
 The necessary modules to work with flask are installed. Now, your project directory is ready for a flask project. You should include the venv to your .gitignore file not to push it to github.
 
+
 ## 💻 Exercises: Day 23
 
 1. Create a project directory with a virtual environment based on the example given above.
