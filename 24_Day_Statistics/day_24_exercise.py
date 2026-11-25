@@ -239,7 +239,7 @@ two_dimension_array_copy = two_dimension_array.copy()
 
 print("Value substitution\n------------------")
 two_dimension_array_copy[1,1] = 55
-two_dimension_array_copy[1,2] = 33
+two_dimension_array_copy[1,2] = 44
 
 print("2D array with substituted values:\n", two_dimension_array_copy)
 
@@ -286,11 +286,16 @@ print("Random...\n---------")
 rndm_float = np.random.random()
 print("Float number with np.random.random():", rndm_float)
 print("Float number with np.random.random(5):", np.random.random(5))
+print("\nnp.random.random(size=[2,3]):\n", np.random.random(size=[2,3]))
+print("\nnp.random.rand(2,2):\n", np.random.rand(2,2))
+print("\nnp.random.choice(['a', 'e', 'i', 'o', 'u'], size=10):", np.random.choice(['a', 'e', 'i', 'o', 'u'], size=10))
+print("\nnp.random.randint(0, 10, size=[5,3]):\n", np.random.randint(0, 10, size=[5,3]))
 
 print("\nInt number with np.random.randint(0, 11):", np.random.randint(0, 11))
 print("Int number with np.random.randint(2,10, size=(3,3)):\n", np.random.randint(2,10, size=(3,3)))
 
-print("\nLarge random array with np.random.normal(79, 15, 80):\n", np.random.normal(79, 15, 80))
+normal_array = np.random.normal(79, 15, 80)
+print("\nLarge random array with np.random.normal(79, 15, 80):\n", normal_array)
 
 
 
@@ -298,3 +303,145 @@ print("\nLarge random array with np.random.normal(79, 15, 80):\n", np.random.nor
 
 
 print("\n\nNumpy and Statistics\n--------------------")
+'''
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+plt.hist(normal_array, color="grey", bins=50)
+plt.show()
+'''
+
+four_by_four_matrix = np.matrix(np.ones((4,4), dtype=float))
+print("4x4 ones matrix:\n", four_by_four_matrix)
+
+np.asarray(four_by_four_matrix)[2] = 2
+print("\n4x4 matrix with replaced values:\n", four_by_four_matrix)
+
+lst = range(0, 11, 2)
+print("\nrange(0, 11 ,2):")
+for l in lst:
+    print(l)
+
+whole_numbers = np.arange(0, 20, 1)
+print("\nnp.arange(0, 20, 1):", whole_numbers)
+
+print("\nOdd numbers, np.arange(1,20,2)", np.arange(1,20,2))
+print("Even numbers, np.arange(2,20,2)", np.arange(2,20,2))
+
+print("\nnp.linspace(1.0, 5.0, num=10):\n", np.linspace(1.0, 5.0, num=10)) # Created 10 values from 1 to 5 evenly spaced
+
+print("\nnp.linspace(1.0, 5.0, num=5, endpoint=False):", np.linspace(1.0, 5.0, num=5, endpoint=False)) # Without inclusing last value in interval
+
+print("\nnp.logspace(2, 4.0, num=4)", np.logspace(2, 4.0, num=4)) # Even spaced numbers on a log scale
+
+x = np.array([1,2,3], dtype=np.complex128)
+print("\nnp.array([1,2,3], dtype=np.complex128):", x)
+print("x.itemsize:", x.itemsize)
+
+
+
+
+
+print("\n\nNumpy Statistical Functions with Example\n----------------------------------------")
+
+np_normal_dis = np.random.normal(5, 0.5, 100)
+np_normal_dis
+
+print("2D array:\n", two_dimension_array_copy)
+print("Min:", two_dimension_array_copy.min())
+print("Max:", two_dimension_array_copy.max())
+print("Mean:", two_dimension_array_copy.mean())
+print("SD:", two_dimension_array_copy.std())
+
+# Minimum and Maximum for each column
+print('\nColumn with minimum: ', np.amin(two_dimension_array_copy,axis=0)) 
+print('Column with maximum: ', np.amax(two_dimension_array_copy,axis=0))
+
+# Min. and Max. for each row
+print('\nRow with minimum: ', np.amin(two_dimension_array_copy,axis=1))
+print('Row with maximum: ', np.amax(two_dimension_array_copy,axis=1))
+
+
+
+
+print("\nCreate repeating sequences\n--------------------------")
+a = [1,2,3]
+print("a =", a)
+
+print('\nRepeat whole of a two times, np.tile(a, 2):', np.tile(a, 2))
+print('Repeat each element of a two times, np.repeat(a, 2):', np.repeat(a, 2))
+
+
+
+
+
+print("\n\nHistogram\n---------")
+from scipy import stats
+np_normal_dis = np.random.normal(5, 0.5, 1000) # mean, standard deviation, number of samples
+
+print("Min:", np.min(np_normal_dis))
+print("Max:", np.max(np_normal_dis))
+print("Mean:", np.mean(np_normal_dis))
+print("Median:", np.median(np_normal_dis))
+print("Mode:", stats.mode(np_normal_dis))
+print("SD:", np.std(np_normal_dis))
+
+import matplotlib.pyplot as plt
+
+plt.hist(np_normal_dis, color='grey', bins=21)
+plt.show()
+
+
+
+
+
+print("\n\nLinear Algebra\n--------------")
+
+print("Dot product\n-----------")
+f = np.array([1,2,3])
+g = np.array([4,5,3])
+
+print("f =", f)
+print("g =", g)
+print("Dot product of f and g:", np.dot(f, g))
+
+
+print("\nMatrix multiplication\n---------------------")
+h = [[1,2],[3,4]]
+i = [[5,6],[7,8]]
+
+print("h =", h)
+print("i =", i)
+print("Matrix multiplication using np.matmul(h, i):\n", np.matmul(h, i))
+
+
+print("\nDeterminant\n-----------")
+print("Det. of i, np.linalg.det(i) =", np.linalg.det(i))
+
+
+print("\nTemp. vs. Pressure\n------------------")
+temp = np.array([1,2,3,4,5])
+pressure = temp * 2 + 5
+
+print("Plotting temp. vs pressure graph...")
+plt.plot(temp, pressure)
+plt.xlabel("Temperature in °C")
+plt.ylabel("Pressure in atm")
+plt.title("Temperature vs Pressure")
+plt.xticks(np.arange(0, 6, step=0.5))
+plt.show()
+
+
+
+print("\n\nGaussian Normal Distribution\n----------------------------")
+import seaborn as sns
+
+mu = 28
+sigma = 15
+samples = 100000
+
+print("Plotting Gaussian normal distribution graph...")
+x = np.random.normal(mu, sigma, samples)
+ax = sns.displot(x)
+ax.set(xlabel='x', ylabel='y')
+plt.show()
