@@ -443,6 +443,7 @@ sigma = 15
 samples = 100000
 
 print("Plotting Gaussian normal distribution graph...")
+
 x = np.random.normal(mu, sigma, samples)
 ax = sns.displot(x)
 ax.set(xlabel='x', ylabel='y')
