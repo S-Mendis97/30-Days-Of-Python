@@ -561,6 +561,7 @@ Now, it is ready to be deployed. Steps to deploy the application on heroku
 
 After this step you will get an application like [this](http://thirdaysofpython-practice.herokuapp.com/)
 
+
 ## Exercises: Day 26
 
 1. You will build [this application](https://thirtydaysofpython-v1-final.herokuapp.com/). Only the text analyser part is left
