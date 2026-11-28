@@ -28,6 +28,7 @@ js_in_title = title_column[title_column.str.contains('JavaScript', case=False, n
 #js_in_title = pd.Series(title for title in hacker_news['title'] if 'JavaScript' in title)
 print("\nTitles with JavaScript in them:\n", js_in_title)
 
+
 print("\nColumn names:\n", hacker_news.columns)
 
 print("\nDataset information:")
